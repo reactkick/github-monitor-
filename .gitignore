@@ -137,3 +137,60 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+# Bu .gitignore dosyası, Vite + React + Netlify projesi için optimize edilmiştir.
+
+# # # 1. GÜVENLİK: GİZLİ BİLGİLER VE ÇEVRE DEĞİŞKENLERİ # # #
+# API Anahtarları, şifreler gibi hassas veriler ASLA paylaşılmamalı.
+# Bu, en önemli bölümdür.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+
+# # # 2. BAĞIMLILIKLAR # # #
+# Bu klasör `npm install` komutuyla herkes tarafından yeniden oluşturulabilir.
+# Depoya göndermek gereksiz ve çok yer kaplar.
+/node_modules
+
+# # # 3. DERLEME VE ÜRETİM ÇIKTILARI # # #
+# `npm run build` komutuyla oluşturulan, yayınlanmaya hazır kodlar.
+# Kaynak koddan her zaman yeniden üretilebilir.
+/dist
+/build
+.vite/
+
+# # # 4. NETLIFY'A ÖZEL DOSYALAR # # #
+# Netlify CLI tarafından oluşturulan yerel yapılandırma ve durum dosyaları.
+.netlify
+
+# # # 5. LOG DOSYALARI # # #
+# Hata ayıklama ve çeşitli işlemlerden kaynaklanan log kayıtları.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# # # 6. TEST VE KAPSAM RAPORLARI # # #
+# Test sonuçları ve kod kapsamı raporları.
+/coverage
+.nyc_output
+/playwright-report/
+/test-results/
+
+# # # 7. EDİTÖR VE IDE'YE ÖZEL AYARLAR # # #
+# Her geliştiricinin kendi kişisel editör ayarları vardır.
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# # # 8. İŞLETİM SİSTEMİNE ÖZGÜ DOSYALAR # # #
+# macOS, Windows ve Linux tarafından otomatik oluşturulan gereksiz sistem dosyaları.
+.DS_Store
+Thumbs.db
+desktop.ini
